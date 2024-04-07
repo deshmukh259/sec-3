@@ -19,7 +19,7 @@ import java.io.IOException;
 
 @Component
 public class JwtAuthFilter extends OncePerRequestFilter {
-
+//every req came here
     @Autowired
     private JwtManager jwtManager;
 
