@@ -26,7 +26,7 @@ public class AuthCOntroller {
 
     @Autowired
     private JwtManager jwtManager;
-
+    //steps 7
     @PostMapping(value = "/login")
     public ResponseEntity<JwtResponse> login(@RequestBody JwtRequest req){
 
@@ -38,7 +38,7 @@ public class AuthCOntroller {
         return new ResponseEntity<>(res, HttpStatus.OK);
 
     }
-
+    //steps 6
     private void doAuthenticate(String username, String password) {
         UsernamePasswordAuthenticationToken auth = new UsernamePasswordAuthenticationToken(username,password);
 

@@ -46,12 +46,13 @@ public class JwtManager {
         return generateToekn(claims,userDetails.getUsername());
 
     }
-
+    //steps 3
     private String generateToekn(Map<String, Object> claims, String username) {
-        return Jwts.builder().setClaims(claims).setSubject(username).setIssuedAt(new Date())
+        return Jwts.builder().setClaims(claims).setSubject(username).setIssuedAt(new Date()).setIssuer("my-service")
                 .setExpiration(new Date(System.currentTimeMillis()+jwt_validity))
                 .signWith(SignatureAlgorithm.HS512,secret).compact();
     }
+    //steps 4
     public Boolean validateToken(String token, UserDetails userDetails){
         String user = getUsername(token);
         return (user.equals(userDetails.getUsername())

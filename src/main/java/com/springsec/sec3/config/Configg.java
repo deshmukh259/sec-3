@@ -12,11 +12,11 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 @Configuration
 public class Configg {
 
-    @Bean
+    @Bean //steps 1
     public PasswordEncoder encoder(){
         return new BCryptPasswordEncoder();
     }
-    @Bean
+    @Bean //steps 2
     public UserDetailsService inmmyUserDet(){
         UserDetails user = User.builder()
                 .username("user")
