@@ -4,6 +4,8 @@ import lombok.experimental.WithBy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -11,6 +13,8 @@ import org.springframework.security.config.annotation.web.configurers.AbstractHt
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.context.request.WebRequest;
 
 @Configuration
 public class ConfigSec {
@@ -44,9 +48,15 @@ public class ConfigSec {
                 UsernamePasswordAuthenticationFilter.class);
         return http.build();
 
-
+// request if found jwt decode it
+       // or redirect to authrize endpoint
     }
 
 
+    @ExceptionHandler(value = Exception.class)
+
+    public ResponseEntity<Object> exception(Exception exception) {
+        return ResponseEntity.status(HttpStatus.FORBIDDEN).body("Bad credentilas !! "+exception.getMessage());
+    }
 }
 

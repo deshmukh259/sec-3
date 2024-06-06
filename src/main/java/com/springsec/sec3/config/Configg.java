@@ -16,7 +16,8 @@ public class Configg {
     public PasswordEncoder encoder(){
         return new BCryptPasswordEncoder();
     }
-    @Bean //steps 2
+
+ /*   @Bean //steps 2
     public UserDetailsService inmmyUserDet(){
         UserDetails user = User.builder()
                 .username("user")
@@ -29,5 +30,5 @@ public class Configg {
                 .roles("USER", "ADMIN")
                 .build();
         return new InMemoryUserDetailsManager(user, admin);
-    }
+    }*/
 }
