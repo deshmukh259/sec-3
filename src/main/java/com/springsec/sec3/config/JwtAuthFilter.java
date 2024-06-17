@@ -32,7 +32,7 @@ public class JwtAuthFilter extends OncePerRequestFilter {
 
 
         String authorization = request.getHeader("Authorization");
-        var v = "AbcdddddsdsXXXSASsdsdmsd";
+        var v = "AbcdddddsdsXXXSASsdsdmsdA";
 
         String username = null;
         String token = null;
