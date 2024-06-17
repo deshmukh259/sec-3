@@ -7,6 +7,6 @@ jobs:
     name: run snyk
     runs-on: ubuntu-latest
     steps:
-      -name: snyk test
+      - name: snyk test
         run: echo "hello github actions...."
 
