@@ -6,5 +6,5 @@ jobs:
     name: ech job
     runs-on: ubuntu_latest
     steps:
-      name: ech my test
+    - name: ech my test
         run: echo "hellloooo githubactionssss"
