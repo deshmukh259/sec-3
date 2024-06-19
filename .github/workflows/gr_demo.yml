@@ -7,3 +7,5 @@ jobs:
     steps:
       - name: echo test
         run: echo "hellloooo githubactionssssfdfdf"
+      - name: eecond echo
+        run: echo "byeeeee"
