@@ -1,10 +1,9 @@
 name: first workflow ech test
-on: workflow_dispach
+on: workflow_dispatch
 
 jobs:
   echo_job:
-    name: ech job
     runs-on: ubuntu_latest
     steps:
       - name: echo test
-          run: echo "hellloooo githubactionssss"
+        run: echo "hellloooo githubactionssss"
