@@ -3,7 +3,7 @@ on: push
 
 jobs:
   echo_job:
-    runs-on: ubuntu_latest
+    runs-on: ubuntu-latest
     steps:
       - name: echo test
         run: echo "hellloooo githubactionssssfdfdf"
