@@ -1,5 +1,5 @@
 name: first workflow ech test
-on: workflow_dispatch
+on: push
 
 jobs:
   echo_job:
