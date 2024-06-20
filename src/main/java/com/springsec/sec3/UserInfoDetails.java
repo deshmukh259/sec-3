@@ -16,7 +16,10 @@ public class UserInfoDetails implements UserDetails {
 
     public UserInfoDetails(UserInfo userInfo) {
         name = userInfo.getName();
+        var v = new BCryptPasswordEncoder();
+        
         password = userInfo.getPassword();
+        
         authorities = Arrays.stream(userInfo.getRoles().split(","))
                 .map(SimpleGrantedAuthority::new)
                 .collect(Collectors.toList());
