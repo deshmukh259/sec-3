@@ -1,4 +1,4 @@
-package com.springsec.sec3;
+package com.springsec.sec3.dto;
 
 import lombok.*;
 

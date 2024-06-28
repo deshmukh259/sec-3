@@ -38,7 +38,7 @@ public class ConfigSec {
                 .cors(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(a ->
                         a.requestMatchers("/secured/**").authenticated()
-                        .requestMatchers("/auth/login").permitAll()
+                        .requestMatchers("/auth/**").permitAll()
                         .anyRequest().authenticated()
                 )
                         .exceptionHandling(ex -> ex.authenticationEntryPoint(entryPoint))

@@ -1,4 +1,4 @@
-package com.springsec.sec3;
+package com.springsec.sec3.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

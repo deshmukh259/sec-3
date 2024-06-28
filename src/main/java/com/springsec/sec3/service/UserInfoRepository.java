@@ -1,5 +1,6 @@
-package com.springsec.sec3;
+package com.springsec.sec3.service;
 
+import com.springsec.sec3.entity.UserInfo;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

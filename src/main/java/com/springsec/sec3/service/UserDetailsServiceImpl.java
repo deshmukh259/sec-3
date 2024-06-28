@@ -1,4 +1,4 @@
-package com.springsec.sec3;
+package com.springsec.sec3.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;

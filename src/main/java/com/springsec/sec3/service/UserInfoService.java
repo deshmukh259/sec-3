@@ -1,4 +1,7 @@
-package com.springsec.sec3;
+package com.springsec.sec3.service;
+
+import com.springsec.sec3.UserInfoRepository;
+import com.springsec.sec3.entity.UserInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -21,7 +24,7 @@ public class UserInfoService implements UserDetailsService {
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
         Optional<UserInfo> userDetail = repository.findByName(username);
-        
+
         // Converting userDetail to UserDetails
         return userDetail.map(UserInfoDetails::new)
                 .orElseThrow(() -> new UsernameNotFoundException("User not found " + username));

@@ -1,4 +1,5 @@
-package com.springsec.sec3;
+package com.springsec.sec3.service;
+import com.springsec.sec3.entity.UserInfo;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -16,7 +17,7 @@ public class UserInfoDetails implements UserDetails {
 
     public UserInfoDetails(UserInfo userInfo) {
         name = userInfo.getName();
-        var v = new BCryptPasswordEncoder();
+        //var v = new BCryptPasswordEncoder();
         
         password = userInfo.getPassword();
         
