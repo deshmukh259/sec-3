@@ -1,9 +1,15 @@
 package com.springsec.sec3.entity;
 
 import jakarta.persistence.*;
+import lombok.*;
 
 @Entity
-public class Order {
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+public class Orders {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -12,5 +18,7 @@ public class Order {
     private String item;
     private int qty;
     private String username;
+    private String status;
+    private String comment;
 
 }

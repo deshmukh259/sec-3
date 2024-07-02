@@ -1,6 +1,5 @@
 package com.springsec.sec3.service;
 
-import com.springsec.sec3.UserInfoRepository;
 import com.springsec.sec3.entity.UserInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;

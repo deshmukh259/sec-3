@@ -1,12 +1,12 @@
 package com.springsec.sec3.controller;
 
 
-import com.springsec.sec3.UserInfoRepository;
 import com.springsec.sec3.dto.JwtRequest;
 import com.springsec.sec3.dto.JwtResponse;
 import com.springsec.sec3.config.JwtManager;
 import com.springsec.sec3.dto.UserDto;
 import com.springsec.sec3.entity.UserInfo;
+import com.springsec.sec3.service.UserInfoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
